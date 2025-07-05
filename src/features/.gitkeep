@@ -1,0 +1,9 @@
+📂 features
+
+- 하나의 사용자 기능 단위로 구성된 로직 모듈
+- 도메인과 UI를 연결하는 기능 중심 단위
+
+- `add-to-cart/`: 상품을 장바구니에 추가하는 로직
+- `login/`, `register/`: 사용자 인증 관련 로직
+- `submit-order/`: 결제 및 주문 처리
+- `write-review/`: 리뷰 작성 기능

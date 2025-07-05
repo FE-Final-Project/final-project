@@ -1,0 +1,65 @@
+📁 src 폴더 구조 설명
+
+📂 app
+- 애플리케이션의 진입점과 전역 설정 관리
+
+- `main.tsx`: 앱의 시작 지점 (React DOM 렌더링)
+- `App.tsx`: 전역 레이아웃, 라우팅 등의 최상위 컴포넌트
+- `routes/`: 전체 라우팅 설정 모듈화
+- `styles/`: 전역 CSS, reset, Tailwind 등 스타일 정의
+
+---
+
+📂 entities
+- 비즈니스 도메인 객체(모델)에 대한 정의
+- 각 도메인의 상태, 타입, API 모델 등 포함
+
+- `product/`: 상품 도메인 (타입, 모델, API 호출 등)
+- `user/`: 사용자 정보, 인증 상태 등
+- `order/`: 주문 정보 및 상태 관리
+- `cart/`: 장바구니 데이터
+
+---
+
+📂 features
+- 하나의 사용자 기능 단위로 구성된 로직 모듈
+- 도메인과 UI를 연결하는 기능 중심 단위
+
+- `add-to-cart/`: 상품을 장바구니에 추가하는 로직
+- `login/`, `register/`: 사용자 인증 관련 로직
+- `submit-order/`: 결제 및 주문 처리
+- `write-review/`: 리뷰 작성 기능
+
+---
+
+📂 pages
+- 실제 라우트와 연결되는 화면 단위 컴포넌트
+- 라우팅되는 단위이며, 각 폴더 내에 `index.tsx`, `layout.tsx` 포함 가능
+
+- `home/`: 메인 페이지
+- `product/`: 상품 상세 또는 리스트
+- `cart/`: 장바구니
+- `checkout/`: 결제 화면
+- `login/`: 로그인 화면
+- `admin/`: 관리자 전용 페이지
+
+---
+
+📂 shared
+- 앱 전역에서 재사용 가능한 공통 리소스
+
+- `ui/`: 버튼, 모달 등 UI 컴포넌트
+- `hooks/`: 커스텀 훅
+- `libs/`: API 요청 함수, 날짜 포맷터 등 유틸리티
+- `config/`: 환경 변수, API baseURL 등 설정 파일
+
+---
+
+📂 widgets
+- 특정 페이지의 UI 레이아웃을 구성하는 조각 컴포넌트
+- `features`보다 단순한 표시용 블록 단위
+
+- `product-card/`: 상품 카드 표시
+- `product-list/`: 상품 리스트
+- `header/`: 상단 네비게이션 바
+- `footer/`: 하단 정보 영역
